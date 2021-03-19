@@ -356,7 +356,9 @@ img {
 }
 
 .logo {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
