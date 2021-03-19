@@ -1,11 +1,11 @@
 .list-cont {
   @extend %ul;
-  @media screen and (min-width: 480px) {
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media screen and(max-width:767px) {
+    display: none;
   }
 }
 .list-cont {
@@ -16,27 +16,16 @@
 
 .list-cont {
   &__link {
-    @media screen and (min-width: 480px) {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.1;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      color: $grey;
-    }
-
-    @media screen and (min-width: 1200px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.1;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      color: $grey;
-      @include animated(color);
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $grey;
+    @include animated(color);
   }
 }
 
