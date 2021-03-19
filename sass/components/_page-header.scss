@@ -1,5 +1,9 @@
 .page-header {
   &__container {
+    @media screen and(max-width:767px) {
+      display: flex;
+      justify-content: space-between;
+    }
     display: flex;
     align-items: center;
   }

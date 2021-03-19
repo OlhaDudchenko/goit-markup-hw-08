@@ -1,10 +1,10 @@
 .hero {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   max-width: 1600px;
-  height: 600px;
+  // height: 600px;
   text-align: center;
   color: $white;
   background-color: $background-color;
@@ -17,16 +17,28 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and(min-width: 767px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+  }
 }
 
-.hero{
-    &__title {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: $white;}
+.hero {
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.61;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $white;
+
+    @media screen and(min-width: 767px) {
+      font-size: 44px;
+      line-height: 1.4;
+    }
+  }
 }

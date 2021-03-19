@@ -1,9 +1,6 @@
 .site-nav {
   @extend %ul;
-
-  @media screen and (min-width: 1200px) {
-    display: flex;
-  }
+  display: flex;
 
   &__below {
     margin-left: 93px;
@@ -13,32 +10,24 @@
   &__item:not(:last-child) {
     margin-right: 50px;
   }
+  @media screen and(max-width:767px) {
+    display: none;
+  }
 }
 
 .site-nav {
   &__link {
-    @media screen and (min-width: 480px) {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.1;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      color: $main-color;
-    }
-
-    @media screen and (min-width: 1200px) {
-      position: relative;
-      display: inline-block;
-      padding-top: 32px;
-      padding-bottom: 32px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.1;
-      letter-spacing: 0.02em;
-      text-decoration: none;
-      color: $main-color;
-      @include animated(color);
-    }
+    position: relative;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $main-color;
+    @include animated(color);
   }
 }
 .site-nav {

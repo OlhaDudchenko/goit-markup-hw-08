@@ -1,4 +1,3 @@
-
 /* Пример бекграунд имейдж */
 /* .features-list__card::before {
   display: block;
@@ -17,53 +16,80 @@
   background-size: 70px;
 }
  */
-  
- .features{padding-top: 94px;}
- 
- .features-list {
-   @extend %ul;
-  display: flex;
-  flex-wrap: wrap;
 
-  & :nth-child(4) {
-  margin-right: 0px;
-}
+.features {
+  @media screen and(max-width:767px) {
+    padding-top: 60px;
+  }
+
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+  }
 }
 
-.features-list{
-    &__card {
-  width: calc((100% - 90px) / 4);
-  margin-right: $list-gap;}
-}
+.features-list {
+  @extend %ul;
 
-.features-list{
-    &__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: #f5f4fa;
-  border-radius: 4px;}
-}
-
-.features-list{
-    &__desc {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  color: $grey;}
-}
-.features-list{
-    &__title {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;}
+  @media screen and(min-width:767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and(min-width:767px) {
+    & :nth-child(4) {
+      margin-right: 0px;
     }
+  }
+}
+
+.features-list {
+  @media screen and(max-width: 767px) {
+    &__card {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and(min-width:767px) {
+    &__card {
+      width: calc((100% - 90px) / 4);
+      margin-right: $list-gap;
+    }
+  }
+}
+
+.features-list {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+  }
+}
+
+.features-list {
+  &__desc {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $grey;
+    text-align: left;
+  }
+}
+.features-list {
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+  @media screen and(max-width: 767px) {
+    text-align: center;
+  }
+}

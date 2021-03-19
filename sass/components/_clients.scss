@@ -1,55 +1,83 @@
-
-
 .clients {
-  padding-bottom: 94px;
-  padding-top: 94px;
-  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and(min-width: 768px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+    text-align: center;
+  }
 }
 
-.clients{
-    &__title {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 0.7;
-  text-align: center;}
+.clients {
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    @media screen and(min-width: 768px) {
+      font-size: 36px;
+      line-height: 0.7;
+    }
+  }
 }
 
 .clients-list {
   @extend %ul;
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  @media screen and(max-width: 767px) {
+    margin: -15px;
+  }
+
+  @media screen and(min-width: 768px) {
+    margin-top: 50px;
+  }
 }
 
-.clients-list{
-    &__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: $list-gap;
-  width: 170px;
-  height: 90px;
-  color: $clients-color;
-  border-radius: 4px;
-  border: 1px solid $clients-color;
-  cursor: pointer;
-  @include animated(color, border);
- 
-  
+.clients-list {
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    color: $clients-color;
+    border-radius: 4px;
+    border: 1px solid $clients-color;
+    @include animated(color, border);
 
-&:hover,
-&:focus {
-  color: $blue;
-  border: 1px solid $blue;}}
+    &:hover,
+    &:focus {
+      color: $blue;
+      border: 1px solid $blue;
+    }
+    @media screen and(max-width: 767px) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
 
+    @media screen and(min-width: 768px) {
+      margin-right: $list-gap;
+    }
+  }
 }
-.clients-list{
-    &__icon {
-  fill: currentColor;}
+.clients-list {
+  &__link {
+    color: inherit;
+    cursor: pointer;
+  }
 }
-.clients-list{
-    &__card:nth-child(6n) {
-  margin-right: 0px;}
+.clients-list {
+  &__icon {
+    fill: currentColor;
+  }
 }
-
+.clients-list {
+  &__card:nth-child(6n) {
+    margin-right: 0px;
+  }
+}
