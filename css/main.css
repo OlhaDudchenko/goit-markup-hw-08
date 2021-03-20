@@ -997,11 +997,16 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1154,7 +1159,6 @@ img {
 
 .footer-form__mail {
   margin: 0;
-  margin-bottom: 20px;
   padding: 0;
   padding: 15px 16px;
   width: 100%;
@@ -1170,6 +1174,12 @@ img {
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-form__mail {
+    margin-bottom: 20px;
+  }
 }
 
 .filters {
