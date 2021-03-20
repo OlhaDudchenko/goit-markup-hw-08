@@ -1,71 +1,91 @@
-
-
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .projects-list {
   @extend %ul;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 34px;
+  flex-direction: column;
+  margin-top: 40px;
 
-  & :nth-child(3n) {
-  margin-right: 0;
-}
-& :nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-}
+  & :last-child {
+    margin-bottom: 0;
+  }
 
-.projects-list{
-    &__card {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  background-color: $white;}
-  
-}
+  @media screen and(min-width: 1200px) {
+    margin-top: 34px;
 
-.projects-list{
-    &__title {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: $main-color;}
-}
-.projects-list{
-    &__descrip {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.9;
-  color: $grey;}
-}
-.projects-list{
-    &__wrapper {
-  padding: 20px 24px;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;}
+    & :nth-child(3n) {
+      margin-right: 0;
+    }
+    & :nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
 }
 
-.projects-list{
-    &__link {
-  display: block;
-  text-decoration: none;
-  @include animated(box-shadow);
-  
+.projects-list {
+  &__card {
+    background-color: $white;
+    margin-bottom: 30px;
 
-&:hover,&:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);}
+    @media screen and(min-width: 1200px) {
+      width: calc((100% - 60px) / 3);
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+  }
 }
+
+.projects-list {
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $main-color;
+  }
+}
+.projects-list {
+  &__descrip {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $grey;
+  }
+}
+.projects-list {
+  &__wrapper {
+    padding: 20px 24px;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+  }
+}
+
+.projects-list {
+  &__link {
+    display: block;
+    text-decoration: none;
+    @include animated(box-shadow);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
 }
 
 .overlay {
@@ -73,35 +93,33 @@
   overflow: hidden;
 }
 
-.overlay{
-    &__text {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.55;
-  text-align: left;
-  color: $white;}
+.overlay {
+  &__text {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.55;
+    text-align: left;
+    color: $white;
+  }
 }
 
-.overlay{
-    &__box {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 63px 24px;
-  background-color: rgba(33, 150, 243, 0.9);
-  transform: translatey(100%);
-  opacity: 0;
-  @include animated(transform);
+.overlay {
+  &__box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translatey(100%);
+    opacity: 0;
+    @include animated(transform);
   }
 
-    .projects-list__card:hover &__box {
-   transform: translatey(0);
-  opacity: 1;}
+  .projects-list__card:hover &__box {
+    transform: translatey(0);
+    opacity: 1;
+  }
 }
-
-
-
-
