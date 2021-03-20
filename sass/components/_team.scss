@@ -1,10 +1,8 @@
 .team {
   background-color: #f5f4fa;
 
-  @media screen and(max-width: 767px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   @media screen and(min-width: 1200px) {
     padding-bottom: 94px;
@@ -21,6 +19,10 @@
     line-height: 1.17;
     text-align: center;
 
+    @media screen and(max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
     @media screen and(min-width: 1200px) {
       font-size: 36px;
       line-height: 0.7;
@@ -30,23 +32,22 @@
 
 .team-list {
   @extend %ul;
-  display: flex;
+  margin-top: 30px;
 
-  & :nth-child(4) {
-    margin-right: 0px;
-  }
-  & :last-child {
-    margin-bottom: 0;
-  }
-
-  @media screen and(max-width: 767px) {
+  @media screen and(max-width:768px) {
+    display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    margin-top: 30px;
+    margin: -15px;
   }
-
   @media screen and(min-width: 1200px) {
     margin-top: 50px;
+
+    & :nth-child(4) {
+      margin-right: 0px;
+    }
+    & :last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -59,6 +60,11 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     margin-bottom: $list-gap;
+
+    @media screen and(min-width:768px) {
+      flex-basis: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
 
     @media screen and(min-width: 1200px) {
       width: calc((100% - 90px) / 4);

@@ -16,6 +16,10 @@
 
   @media screen and(min-width: 768px) {
     justify-content: center;
+    margin-bottom: 40px;
+    & :not(:last-child) {
+      margin-right: 8px;
+    }
   }
 }
 .filters__item {

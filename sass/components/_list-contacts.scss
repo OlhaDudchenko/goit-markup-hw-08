@@ -1,16 +1,36 @@
 .list-cont {
   @extend %ul;
   display: flex;
-  align-items: center;
   margin-left: auto;
-
   @media screen and(max-width:767px) {
     display: none;
   }
+  @media screen and(max-width:1199px) {
+    flex-direction: column;
+  }
+
+  @media screen and(min-width:1200px) {
+    align-items: center;
+  }
 }
 .list-cont {
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  @media screen and(min-width:1200px) {
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.list-cont__item__margin {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+}
+
+.list-cont__item {
+  @media screen and(min-width:768px) {
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
@@ -37,7 +57,13 @@
 }
 .list-cont {
   &__icon {
-    margin-right: 10px;
     fill: currentColor;
+    @media screen and(min-width: 768px) {
+      margin-right: 8px;
+    }
+
+    @media screen and(min-width: 1200px) {
+      margin-right: 10px;
+    }
   }
 }
