@@ -34,7 +34,7 @@
   @extend %ul;
   margin-top: 30px;
 
-  @media screen and(max-width:768px) {
+  @media screen and(min-width:768px) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
@@ -91,5 +91,17 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
+  }
+}
+
+.team-list__wrapper {
+  height: 460px;
+
+  @media screen and(min-width: 768px) {
+    height: 374px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    height: 260px;
   }
 }

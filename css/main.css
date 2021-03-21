@@ -857,7 +857,7 @@ img {
   margin-top: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .team-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -920,6 +920,22 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
+}
+
+.team-list__wrapper {
+  height: 460px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list__wrapper {
+    height: 374px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list__wrapper {
+    height: 260px;
+  }
 }
 
 .social-list {
@@ -1398,15 +1414,19 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-top: 40px;
 }
 
 .projects-list :last-child {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .projects-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1437,6 +1457,9 @@ img {
     -ms-flex-preferred-size: calc((100% - 4 * 15px) / 2);
         flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -1474,8 +1497,16 @@ img {
   border-right: 1px solid #eeeeee;
 }
 
+@media screen and (min-width: 768px) {
+  .projects-list__wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
 .projects-list__link {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1486,6 +1517,18 @@ img {
 .projects-list__link:hover, .projects-list__link:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (min-width: 768px) {
+  .projects-list__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .overlay {
