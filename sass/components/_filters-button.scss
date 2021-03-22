@@ -21,6 +21,9 @@
       margin-right: 8px;
     }
   }
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 34px;
+  }
 }
 .filters__item {
   @media screen and(max-width: 767px) {
