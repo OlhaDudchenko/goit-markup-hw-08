@@ -17,7 +17,9 @@
     }
 
     @media screen and(min-width: 1200px) {
+      flex-wrap: nowrap;
       align-items: baseline;
+      justify-content: space-between;
     }
   }
 }
@@ -26,6 +28,9 @@
   @media screen and(min-width: 768px) {
     margin-left: 76px;
     text-align: center;
+  }
+  @media screen and(min-width: 1200px) {
+    margin-left: 0;
   }
 }
 
@@ -37,8 +42,8 @@
 }
 .address-list {
   &__city {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0;
+
     color: $white;
   }
 }
@@ -46,7 +51,7 @@
   &__link {
     display: block;
     margin-top: 8px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     color: $footer-mail-number;
     text-decoration: none;
 
@@ -60,19 +65,20 @@
   @media screen and(max-width: 767px) {
     margin-top: 60px;
   }
-  @media screen and(min-width: 768px) {
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
     margin-left: 165px;
     text-align: center;
     margin-bottom: 42px;
   }
   @media screen and(min-width: 1200px) {
-    margin-left: 70px;
+    // margin-left: 70px;
+    margin-bottom: 0;
   }
 }
 
 .social {
   &__title {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -128,18 +134,19 @@
 .news {
   margin-top: 60px;
 
-  @media screen and(min-width: 768px) {
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
     margin-left: 166px;
     text-align: center;
   }
   @media screen and(min-width: 1200px) {
-    margin-left: 93px;
+    // margin-left: 93px;
+    margin-top: 0;
   }
 }
 
 .news {
   &__title {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -177,6 +184,9 @@
     }
     @media screen and(max-width: 1199px) {
       margin-bottom: 20px;
+    }
+    @media screen and(min-width: 1200px) {
+      width: 358px;
     }
   }
 }
