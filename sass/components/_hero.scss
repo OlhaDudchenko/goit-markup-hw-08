@@ -24,35 +24,72 @@
 }
 
 @media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
-    background-image: url('/images/hero/@2xmobile-hero.jpg');
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/images/hero/@2xmobile-hero.jpg');
+    background-color: $background-color;
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url('/images/hero/tablet-hero.jpg');
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/images/hero/tablet-hero.jpg');
+    background-color: $background-color;
   }
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero {
-    background-image: url('/images/hero/@2xtablet-hero.jpg');
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/images/hero/@2xtablet-hero.jpg');
+    background-color: $background-color;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: url('/images/hero/desktop-hero.jpg');
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/images/hero/desktop-hero.jpg');
+    background-color: $background-color;
     height: 600px;
   }
 }
 
-@media (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero {
-    background-image: url('/images/hero/@2xdesktop-hero.jpg');
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/images/hero/@2xdesktop-hero.jpg');
+    background-color: $background-color;
   }
 }
 
