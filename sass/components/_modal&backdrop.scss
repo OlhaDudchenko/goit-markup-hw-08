@@ -35,6 +35,7 @@
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   @include animated(transform);
+  // overflow-y: scroll;
 
   @media screen and(min-width: 1200px) {
     width: 528px;
