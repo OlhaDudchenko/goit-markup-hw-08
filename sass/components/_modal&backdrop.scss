@@ -34,14 +34,15 @@
   border-radius: 4px;
 
   @media screen and(min-width: 768px) {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 450px;
-    height: 609px;
-    transform: translate(-50%, -50%) scale(1);
-    @include animated(transform);
-  }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 450px;
+  height: 609px;
+  
+  transform: translate(-50%, -50%) scale(1);
+  @include animated(transform);
+  // }
 
   @media screen and(min-width: 1200px) {
     width: 528px;
@@ -53,6 +54,8 @@
     position: absolute;
     top: 101px;
     right: 23px;
+    // top: 8px;
+    // right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,8 +72,8 @@
       color: $blue;
     }
     @media screen and(min-width: 768px) {
-      top: 8px;
-      right: 8px;
+    top: 8px;
+    right: 8px;
     }
   }
 }
