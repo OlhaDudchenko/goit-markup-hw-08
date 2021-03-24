@@ -6,6 +6,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   @include animated(opacity, visibility);
+  @media screen and(max-width: 767px) {
+    padding: 93px 15px 94px 15px;
+    overflow-y: scroll;
+  }
 }
 
 .backdrop {
@@ -25,17 +29,19 @@
 }
 
 .modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 450px;
-  height: 609px;
   padding: 40px;
   background-color: $white;
   border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
-  @include animated(transform);
-  // overflow-y: scroll;
+
+  @media screen and(min-width: 768px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 450px;
+    height: 609px;
+    transform: translate(-50%, -50%) scale(1);
+    @include animated(transform);
+  }
 
   @media screen and(min-width: 1200px) {
     width: 528px;
@@ -45,8 +51,8 @@
 .modal {
   &__button {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 101px;
+    right: 23px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +67,10 @@
     &:hover,
     &:focus {
       color: $blue;
+    }
+    @media screen and(min-width: 768px) {
+      top: 8px;
+      right: 8px;
     }
   }
 }
